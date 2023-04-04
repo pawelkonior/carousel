@@ -84,7 +84,7 @@ html, body {
 }
 
 .carousel {
-    background-color: lightblue;
+    position: relative;
 }
 
 .carousel .carousel__slides {
@@ -114,19 +114,19 @@ html, body {
 
 .slide:first-child {
     left: 0;
-    animation-name: slide-1;
+    /*animation-name: slide-1;*/
     background-image: url('../images/slide_bg1.jpeg');
 }
 
 .slide:nth-child(2) {
     left: 100%;
-    animation-name: slide-2;
+    /*animation-name: slide-2;*/
     background-image: url('../images/slide_bg2.avif');
 }
 
 .slide:last-child {
     left: 200%;
-    animation-name: slide-3;
+    /*animation-name: slide-3;*/
     background-image: url('../images/slide_bg3.jpeg');
 }
 
@@ -136,7 +136,7 @@ html, body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 0.625rem;
+    padding: 0.625rem 7.8125rem 0.625rem 0.625rem;
     box-sizing: border-box;
     /*font-family: 'Roboto', sans-serif;*/
 }
@@ -150,19 +150,50 @@ html, body {
 .slide .slide__text {
     /*font-weight: 300;*/
     font-family: 'Roboto Slab Light', sans-serif;
+    margin: 0;
 }
 
 .slide .slide__link {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab Regular', sans-serif;
+    position: absolute;
+    right: 0.625rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 400ms;
 }
 
 .slide .slide__link:hover {
+    color: gold;
 }
 
 .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .nav .nav__btn {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
 }
 
 .nav .nav__btn.nav__btn--next {
+    position: absolute;
+    right: 1rem;
+    transform: rotate(0deg);
 }
